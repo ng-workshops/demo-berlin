@@ -18,3 +18,16 @@
   </li>
 </ul>
 
+<form [formGroup]="form" novalidate>
+  <input type="text" name="name" formControlName="name" #n/>
+  <br />
+  <input type="text" name="firstname" formControlName="firstname" #f/>
+  <br />
+
+  <button (click)="search()">Search</button>
+
+  <h1></h1>
+
+  <pre>form = <br/>{{ form.getRawValue() | json }}</pre>
+
+</form>
